@@ -42,9 +42,9 @@ class ItemsController < ApplicationController
     render json: Item.where(barcode: params[:code])
   end
 
-  # GET /items/notifications
-  def notifications
-    render json: Item.where("date() > useby_notify OR date() > useby OR low_stock_threshold >= quantity")
+  # GET /items/low_stock
+  def low_stock
+    render json: Item.where("low_stock_threshold >= quantity")
   end
 
   # GET /items/expiring_soon
