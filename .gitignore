@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+*.log
+tmp/
+
+server/.bundle
+server/vendor
+server/Gemfile.lock
+server/tmp/*
+server/log/*
+server/storage/*
