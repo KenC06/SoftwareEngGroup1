@@ -1894,3 +1894,36 @@ Processing by ItemsController#expiring_soon as */*
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 753)
 
 
+Started POST "/items" for 127.0.0.1 at 2025-11-02 19:25:35 +1030
+Processing by ItemsController#create as HTML
+  Parameters: {"item" => {"name" => "test R03", "quantity" => 3, "expiry_date" => "2033-03-03", "reminder_days_before" => 14}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:19:in 'ItemsController#create'
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "low_stock_threshold", "barcode", "useby", "useby_notify", "created_at", "updated_at", "expiry_date", "reminder_days_before", "reminder_sent_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "test R03"], ["quantity", 3], ["low_stock_threshold", 0], ["barcode", nil], ["useby", nil], ["useby_notify", nil], ["created_at", "2025-11-02 08:55:35.503874"], ["updated_at", "2025-11-02 08:55:35.503874"], ["expiry_date", "2033-03-03"], ["reminder_days_before", 14], ["reminder_sent_at", nil]]
+  ↳ app/controllers/items_controller.rb:19:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:19:in 'ItemsController#create'
+Completed 201 Created in 3ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 1865)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 19:25:35 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:7:in 'ItemsController#index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 763)
+
+
+Started GET "/items/expiring_soon" for ::1 at 2025-11-02 19:25:35 +1030
+Processing by ItemsController#expiring_soon as */*
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (expiry_date IS NOT NULL AND expiry_date <= '2025-11-09') AND "items"."reminder_sent_at" IS NULL[0m
+  ↳ app/controllers/items_controller.rb:53:in 'ItemsController#expiring_soon'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 753)
+
+
+Started GET "/items/expiring_soon" for ::1 at 2025-11-02 19:25:35 +1030
+Processing by ItemsController#expiring_soon as */*
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (expiry_date IS NOT NULL AND expiry_date <= '2025-11-09') AND "items"."reminder_sent_at" IS NULL[0m
+  ↳ app/controllers/items_controller.rb:53:in 'ItemsController#expiring_soon'
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 753)
+
+
