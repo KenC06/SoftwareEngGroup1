@@ -218,3 +218,677 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 791)
 
 
+Started GET "/" for 127.0.0.1 at 2025-11-01 23:06:26 +1030
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/elliot/.local/share/gem/ruby/3.4.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/elliot/.local/share/gem/ruby/3.4.0/gems/railties-7.1.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 341)
+Completed 200 OK in 108ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 7272)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-01 23:06:43 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 68ms (Views: 20.5ms | ActiveRecord: 3.2ms | Allocations: 15140)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-01 23:06:43 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/items" for 127.0.0.1 at 2025-11-01 23:10:33 +1030
+Started GET "/items" for 127.0.0.1 at 2025-11-01 23:10:33 +1030
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 40ms (Views: 15.0ms | ActiveRecord: 2.2ms | Allocations: 15433)
+
+
+Completed 200 OK in 40ms (Views: 16.0ms | ActiveRecord: 1.2ms | Allocations: 15302)
+
+
+Started PATCH "/items/1" for 127.0.0.1 at 2025-11-01 23:10:36 +1030
+Processing by ItemsController#update as HTML
+  Parameters: {"item" => {"quantity" => 2}, "id" => "1"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:44:in 'ItemsController#set_item'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+  [1m[36mItem Update (1.1ms)[0m  [1m[33mUPDATE "items" SET "quantity" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["quantity", 2], ["updated_at", "2025-11-01 12:40:36.340384"], ["id", 1]]
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+Completed 200 OK in 22ms (Views: 0.6ms | ActiveRecord: 10.6ms | Allocations: 4003)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-01 23:10:36 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 742)
+
+
+Started GET "/ws" for 127.0.0.1 at 2025-11-01 23:10:40 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for 127.0.0.1 at 2025-11-01 23:11:12 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for 127.0.0.1 at 2025-11-01 23:12:16 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for 127.0.0.1 at 2025-11-01 23:14:24 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for 127.0.0.1 at 2025-11-01 23:18:40 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for 127.0.0.1 at 2025-11-01 23:27:13 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/items" for 127.0.0.1 at 2025-11-02 00:37:26 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 993)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 00:37:26 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 741)
+
+
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-02 04:40:52.331089', '2025-11-02 04:40:52.331092') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20251031075732)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "quantity" integer, "low_stock_threshold" integer, "barcode" varchar, "useby" date, "useby_notify" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251031075732') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (39.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-02 04:45:53.607842', '2025-11-02 04:45:53.607845') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20251031075732)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "quantity" integer, "low_stock_threshold" integer DEFAULT 0, "barcode" varchar DEFAULT NULL, "useby" date DEFAULT NULL, "useby_notify" date DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251031075732') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:38:20 +1030
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:38:20 +1030
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 14ms (Views: 1.7ms | ActiveRecord: 0.9ms | Allocations: 10059)
+
+
+Completed 200 OK in 13ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 9840)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:38:24 +1030
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:38:24 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Processing by ItemsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 743)
+
+
+  [1m[36mItem Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 827)
+
+
+Started POST "/items" for 127.0.0.1 at 2025-11-02 15:38:28 +1030
+Processing by ItemsController#create as HTML
+  Parameters: {"item" => {"name" => "test", "quantity" => 1}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+  [1m[36mItem Create (1.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "low_stock_threshold", "barcode", "useby", "useby_notify", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "test"], ["quantity", 1], ["low_stock_threshold", 0], ["barcode", nil], ["useby", nil], ["useby_notify", nil], ["created_at", "2025-11-02 05:08:28.675601"], ["updated_at", "2025-11-02 05:08:28.675601"]]
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+Completed 201 Created in 51ms (Views: 0.8ms | ActiveRecord: 6.0ms | Allocations: 9801)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:38:28 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 747)
+
+
+Started PATCH "/items/1" for 127.0.0.1 at 2025-11-02 15:38:31 +1030
+Processing by ItemsController#update as HTML
+  Parameters: {"item" => {"quantity" => 2}, "id" => "1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#set_item'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "quantity" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["quantity", 2], ["updated_at", "2025-11-02 05:08:31.178943"], ["id", 1]]
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 3095)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:38:31 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 693)
+
+
+Started PATCH "/items/1" for 127.0.0.1 at 2025-11-02 15:38:34 +1030
+Processing by ItemsController#update as HTML
+  Parameters: {"item" => {"quantity" => 1}, "id" => "1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#set_item'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "quantity" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["quantity", 1], ["updated_at", "2025-11-02 05:08:34.925193"], ["id", 1]]
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2223)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:38:34 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 681)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:42:44 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 681)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-02 15:42:44 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/items" for 127.0.0.1 at 2025-11-02 15:43:52 +1030
+Processing by ItemsController#create as HTML
+  Parameters: {"item" => {"name" => "test 2", "quantity" => 1}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "low_stock_threshold", "barcode", "useby", "useby_notify", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "test 2"], ["quantity", 1], ["low_stock_threshold", 0], ["barcode", nil], ["useby", nil], ["useby_notify", nil], ["created_at", "2025-11-02 05:13:52.642144"], ["updated_at", "2025-11-02 05:13:52.642144"]]
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+Completed 201 Created in 3ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 1819)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:43:52 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 740)
+
+
+Started POST "/items" for 127.0.0.1 at 2025-11-02 15:45:30 +1030
+Processing by ItemsController#create as */*
+  Parameters: {"name" => "test 3", "quantity" => 100, "low_stock_threshold" => 1, "barcode" => 1234, "useby" => "2025-06-01", "useby_notify" => "2024-06-01", "item" => {"name" => "test 3", "quantity" => 100, "low_stock_threshold" => 1, "barcode" => 1234, "useby" => "2025-06-01", "useby_notify" => "2024-06-01"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "low_stock_threshold", "barcode", "useby", "useby_notify", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "test 3"], ["quantity", 100], ["low_stock_threshold", 1], ["barcode", "1234"], ["useby", "2025-06-01"], ["useby_notify", "2024-06-01"], ["created_at", "2025-11-02 05:15:30.923776"], ["updated_at", "2025-11-02 05:15:30.923776"]]
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+Completed 201 Created in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 1901)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:45:36 +1030
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:45:36 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 827)
+
+
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 819)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 15:45:45 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 819)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-02 15:45:45 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/items/search_barcode/1234" for 127.0.0.1 at 2025-11-02 15:51:20 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/items/search_barcode/1234"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-02 15:51:20 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/items/barcode/1234" for 127.0.0.1 at 2025-11-02 15:51:42 +1030
+  
+AbstractController::ActionNotFound (The action 'searh_barcode' could not be found for ItemsController):
+  
+actionpack (7.1.6) lib/abstract_controller/base.rb:155:in 'AbstractController::Base#process'
+actionpack (7.1.6) lib/action_controller/metal.rb:227:in 'ActionController::Metal#dispatch'
+actionpack (7.1.6) lib/action_controller/metal.rb:309:in 'ActionController::Metal.dispatch'
+actionpack (7.1.6) lib/action_dispatch/routing/route_set.rb:49:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (7.1.6) lib/action_dispatch/routing/route_set.rb:32:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (7.1.6) lib/action_dispatch/journey/router.rb:51:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (7.1.6) lib/action_dispatch/journey/router.rb:131:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (7.1.6) lib/action_dispatch/journey/router.rb:124:in 'Array#each'
+actionpack (7.1.6) lib/action_dispatch/journey/router.rb:124:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (7.1.6) lib/action_dispatch/journey/router.rb:32:in 'ActionDispatch::Journey::Router#serve'
+actionpack (7.1.6) lib/action_dispatch/routing/route_set.rb:882:in 'ActionDispatch::Routing::RouteSet#call'
+rack (3.2.3) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.3) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.3) lib/rack/head.rb:15:in 'Rack::Head#call'
+activerecord (7.1.6) lib/active_record/migration.rb:655:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in 'block in ActionDispatch::Callbacks#call'
+activesupport (7.1.6) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (7.1.6) lib/action_dispatch/middleware/callbacks.rb:28:in 'ActionDispatch::Callbacks#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/executor.rb:14:in 'ActionDispatch::Executor#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in 'ActionDispatch::DebugExceptions#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in 'ActionDispatch::ShowExceptions#call'
+railties (7.1.6) lib/rails/rack/logger.rb:37:in 'Rails::Rack::Logger#call_app'
+railties (7.1.6) lib/rails/rack/logger.rb:24:in 'block in Rails::Rack::Logger#call'
+activesupport (7.1.6) lib/active_support/tagged_logging.rb:139:in 'block in ActiveSupport::TaggedLogging#tagged'
+activesupport (7.1.6) lib/active_support/tagged_logging.rb:39:in 'ActiveSupport::TaggedLogging::Formatter#tagged'
+activesupport (7.1.6) lib/active_support/tagged_logging.rb:139:in 'ActiveSupport::TaggedLogging#tagged'
+activesupport (7.1.6) lib/active_support/broadcast_logger.rb:241:in 'ActiveSupport::BroadcastLogger#method_missing'
+railties (7.1.6) lib/rails/rack/logger.rb:24:in 'Rails::Rack::Logger#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/remote_ip.rb:92:in 'ActionDispatch::RemoteIp#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/request_id.rb:28:in 'ActionDispatch::RequestId#call'
+rack (3.2.3) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (7.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/server_timing.rb:59:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/server_timing.rb:24:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (7.1.6) lib/action_dispatch/middleware/server_timing.rb:58:in 'ActionDispatch::ServerTiming#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/executor.rb:14:in 'ActionDispatch::Executor#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/static.rb:25:in 'ActionDispatch::Static#call'
+rack (3.2.3) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (7.1.6) lib/action_dispatch/middleware/host_authorization.rb:141:in 'ActionDispatch::HostAuthorization#call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in 'Rack::Cors#call'
+railties (7.1.6) lib/rails/engine.rb:536:in 'Rails::Engine#call'
+puma (7.1.0) lib/puma/configuration.rb:300:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (7.1.0) lib/puma/request.rb:101:in 'block in Puma::Request#handle_request'
+puma (7.1.0) lib/puma/thread_pool.rb:355:in 'Puma::ThreadPool#with_force_shutdown'
+puma (7.1.0) lib/puma/request.rb:100:in 'Puma::Request#handle_request'
+puma (7.1.0) lib/puma/server.rb:503:in 'Puma::Server#process_client'
+puma (7.1.0) lib/puma/server.rb:262:in 'block in Puma::Server#run'
+puma (7.1.0) lib/puma/thread_pool.rb:182:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/items/barcode/1234" for 127.0.0.1 at 2025-11-02 15:51:51 +1030
+Processing by ItemsController#search_barcode as HTML
+  Parameters: {"code" => "1234"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."barcode" = ?[0m  [["barcode", "1234"]]
+  ↳ app/controllers/items_controller.rb:42:in 'ItemsController#search_barcode'
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 1.1ms | Allocations: 5549)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-02 15:51:51 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/items/out_of_date" for 127.0.0.1 at 2025-11-02 15:52:41 +1030
+Processing by ItemsController#show as HTML
+  Parameters: {"id" => "out_of_date"}
+  [1m[36mItem Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#set_item'
+Completed 404 Not Found in 3ms (ActiveRecord: 1.3ms | Allocations: 2192)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'="out_of_date"):
+  
+app/controllers/items_controller.rb:52:in 'ItemsController#set_item'
+Started GET "/items/out_of_date/" for 127.0.0.1 at 2025-11-02 15:53:51 +1030
+Processing by ItemsController#show as HTML
+  Parameters: {"id" => "out_of_date"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:52:in 'ItemsController#set_item'
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms | Allocations: 2169)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'="out_of_date"):
+  
+app/controllers/items_controller.rb:52:in 'ItemsController#set_item'
+Started GET "/items/get/ood" for 127.0.0.1 at 2025-11-02 15:54:21 +1030
+Processing by ItemsController#out_of_date as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (date() > useby)[0m
+  ↳ app/controllers/items_controller.rb:46:in 'ItemsController#out_of_date'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 3.2ms | Allocations: 5483)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-02 15:54:21 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/items/get/notifications" for 127.0.0.1 at 2025-11-02 16:05:09 +1030
+Processing by ItemsController#notifications as HTML
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (date() > useby_notify OR date() > useby OR low_stock_threshold >= quantity)[0m
+  ↳ app/controllers/items_controller.rb:56:in 'ItemsController#notifications'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.9ms | Allocations: 5002)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-02 16:05:09 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started PATCH "/items/1" for 127.0.0.1 at 2025-11-02 16:05:21 +1030
+Processing by ItemsController#update as HTML
+  Parameters: {"item" => {"quantity" => 0}, "id" => "1"}
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:62:in 'ItemsController#set_item'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+  [1m[36mItem Update (1.6ms)[0m  [1m[33mUPDATE "items" SET "quantity" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["quantity", 0], ["updated_at", "2025-11-02 05:35:21.232750"], ["id", 1]]
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+  [1m[36mTRANSACTION (40.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:29:in 'ItemsController#update'
+Completed 200 OK in 50ms (Views: 0.3ms | ActiveRecord: 42.5ms | Allocations: 2481)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 16:05:21 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 861)
+
+
+Started GET "/items/get/notifications" for 127.0.0.1 at 2025-11-02 16:05:24 +1030
+Processing by ItemsController#notifications as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (date() > useby_notify OR date() > useby OR low_stock_threshold >= quantity)[0m
+  ↳ app/controllers/items_controller.rb:56:in 'ItemsController#notifications'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 814)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-02 16:05:24 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShoppingList (20251102060554)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "shopping_list" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "quantity" integer, "item_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_712af0f4b1"
+FOREIGN KEY ("item_id")
+  REFERENCES "items" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_shopping_list_on_item_id" ON "shopping_list" ("item_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251102060554') RETURNING "version"[0m
+  [1m[36mTRANSACTION (40.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:04:30 +1030
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ShoppinglistController):
+  
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:05:23 +1030
+  
+ArgumentError ('shoppingList' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in 'block in <main>'
+config/routes.rb:2:in '<main>'
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:05:39 +1030
+  
+ArgumentError ('ShoppingList' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in 'block in <main>'
+config/routes.rb:2:in '<main>'
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:06:00 +1030
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ShoppinglistController):
+  
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:06:42 +1030
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ShoppinglistController):
+  
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:10:29 +1030
+  
+ActionController::RoutingError (uninitialized constant ShoppinglistController):
+  
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:12:00 +1030
+  
+ArgumentError ('ShoppingList' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:5:in 'block in <main>'
+config/routes.rb:2:in '<main>'
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:12:43 +1030
+  
+ActionController::RoutingError (uninitialized constant ShoppinglistController):
+  
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:12:48 +1030
+  
+ActionController::RoutingError (uninitialized constant ShoppinglistsController):
+  
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:14:10 +1030
+Processing by ShoppingListController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+  
+NameError (uninitialized constant ShoppingListController::ShoppingList):
+  
+app/controllers/shopping_list_controller.rb:6:in 'ShoppingListController#index'
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:14:28 +1030
+Processing by ShoppingListController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 234)
+
+
+  
+NameError (uninitialized constant ShoppingListController::ShoppingLists):
+  
+app/controllers/shopping_list_controller.rb:6:in 'ShoppingListController#index'
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:14:45 +1030
+Processing by ShoppingListController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 234)
+
+
+  
+NameError (uninitialized constant ShoppingListController::Shopping_List):
+  
+app/controllers/shopping_list_controller.rb:6:in 'ShoppingListController#index'
+  [1m[35m (42.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-02 06:46:33.012908', '2025-11-02 06:46:33.012911') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20251031075732)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "quantity" integer, "low_stock_threshold" integer DEFAULT 0, "barcode" varchar DEFAULT NULL, "useby" date DEFAULT NULL, "useby_notify" date DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251031075732') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingList (20251102060554)
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateShoppingList (20251102060554)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "shopping_list" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "quantity" integer, "item_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251102060554') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:17:31 +1030
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShoppingListController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2382)
+
+
+  
+NameError (uninitialized constant ShoppingListController::ShoppingList):
+  
+app/controllers/shopping_list_controller.rb:6:in 'ShoppingListController#index'
+  [1m[35m (39.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-02 06:50:31.844287', '2025-11-02 06:50:31.844290') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateItems (20251031075732)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "quantity" integer, "low_stock_threshold" integer DEFAULT 0, "barcode" varchar DEFAULT NULL, "useby" date DEFAULT NULL, "useby_notify" date DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251031075732') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShoppingLists (20251102064941)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "shopping_lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "quantity" integer, "item_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251102064941') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:20:44 +1030
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShoppingListController#index as HTML
+  [1m[36mShoppingList Load (0.1ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists"[0m
+  ↳ app/controllers/shopping_list_controller.rb:8:in 'ShoppingListController#index'
+Completed 200 OK in 10ms (Views: 1.0ms | ActiveRecord: 1.0ms | Allocations: 9148)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-02 17:20:44 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:21:46 +1030
+Processing by ShoppingListController#create as */*
+  Parameters: {"name" => "test", "quantity" => 100, "shopping_list" => {"name" => "test", "quantity" => 100}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 1.0ms | Allocations: 290)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: item):
+  
+app/controllers/shopping_list_controller.rb:49:in 'ShoppingListController#item_params'
+app/controllers/shopping_list_controller.rb:18:in 'ShoppingListController#create'
+Started POST "/items" for 127.0.0.1 at 2025-11-02 17:22:29 +1030
+Processing by ItemsController#create as HTML
+  Parameters: {"item" => {"name" => "test 4", "quantity" => 1}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "low_stock_threshold", "barcode", "useby", "useby_notify", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "test 4"], ["quantity", 1], ["low_stock_threshold", 0], ["barcode", nil], ["useby", nil], ["useby_notify", nil], ["created_at", "2025-11-02 06:52:29.961571"], ["updated_at", "2025-11-02 06:52:29.961571"]]
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:20:in 'ItemsController#create'
+Completed 201 Created in 32ms (Views: 0.7ms | ActiveRecord: 11.0ms | Allocations: 9597)
+
+
+Started GET "/items" for 127.0.0.1 at 2025-11-02 17:22:29 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 882)
+
+
+Started POST "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:22:49 +1030
+Processing by ShoppingListController#create as */*
+  Parameters: {"item" => {"name" => "test", "quantity" => 100}, "shopping_list" => {}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shopping_list_controller.rb:20:in 'ShoppingListController#create'
+  [1m[36mShoppingList Create (0.6ms)[0m  [1m[32mINSERT INTO "shopping_lists" ("name", "quantity", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "test"], ["quantity", 100], ["item_id", nil], ["created_at", "2025-11-02 06:52:49.618070"], ["updated_at", "2025-11-02 06:52:49.618070"]]
+  ↳ app/controllers/shopping_list_controller.rb:20:in 'ShoppingListController#create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shopping_list_controller.rb:20:in 'ShoppingListController#create'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.0ms | Allocations: 5190)
+
+
+  
+NoMethodError (undefined method 'shopping_list_url' for an instance of ShoppingListController):
+  
+app/controllers/shopping_list_controller.rb:21:in 'ShoppingListController#create'
+Started GET "/items" for 127.0.0.1 at 2025-11-02 17:23:50 +1030
+Started GET "/items" for 127.0.0.1 at 2025-11-02 17:23:50 +1030
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 689)
+
+
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/items_controller.rb:8:in 'ItemsController#index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 691)
+
+
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:23:57 +1030
+Processing by ShoppingListController#index as HTML
+  [1m[36mShoppingList Load (0.2ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists"[0m
+  ↳ app/controllers/shopping_list_controller.rb:8:in 'ShoppingListController#index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 824)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-02 17:23:57 +1030
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:24:09 +1030
+Processing by ShoppingListController#create as */*
+  Parameters: {"item" => {"name" => "test 2", "quantity" => 100}, "shopping_list" => {}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shopping_list_controller.rb:20:in 'ShoppingListController#create'
+  [1m[36mShoppingList Create (0.7ms)[0m  [1m[32mINSERT INTO "shopping_lists" ("name", "quantity", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "test 2"], ["quantity", 100], ["item_id", nil], ["created_at", "2025-11-02 06:54:09.405116"], ["updated_at", "2025-11-02 06:54:09.405116"]]
+  ↳ app/controllers/shopping_list_controller.rb:20:in 'ShoppingListController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shopping_list_controller.rb:20:in 'ShoppingListController#create'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.9ms | Allocations: 1902)
+
+
+  
+NoMethodError (undefined method 'shopping_list_url' for an instance of ShoppingListController):
+  
+app/controllers/shopping_list_controller.rb:21:in 'ShoppingListController#create'
+Started POST "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:28:15 +1030
+Processing by ShoppingListController#create as */*
+  Parameters: {"item" => {"name" => "test 3", "quantity" => 100}, "shopping_list" => {}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/shopping_list_controller.rb:20:in 'ShoppingListController#create'
+  [1m[36mShoppingList Create (0.4ms)[0m  [1m[32mINSERT INTO "shopping_lists" ("name", "quantity", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "test 3"], ["quantity", 100], ["item_id", nil], ["created_at", "2025-11-02 06:58:15.513189"], ["updated_at", "2025-11-02 06:58:15.513189"]]
+  ↳ app/controllers/shopping_list_controller.rb:20:in 'ShoppingListController#create'
+  [1m[36mTRANSACTION (25.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/shopping_list_controller.rb:20:in 'ShoppingListController#create'
+Completed 201 Created in 29ms (Views: 0.5ms | ActiveRecord: 26.7ms | Allocations: 4498)
+
+
+Started GET "/shoppinglist" for 127.0.0.1 at 2025-11-02 17:28:25 +1030
+Processing by ShoppingListController#index as */*
+  Parameters: {"item" => {"name" => "test 3", "quantity" => 100}, "shopping_list" => {}}
+  [1m[36mShoppingList Load (0.3ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists"[0m
+  ↳ app/controllers/shopping_list_controller.rb:8:in 'ShoppingListController#index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 910)
+
+

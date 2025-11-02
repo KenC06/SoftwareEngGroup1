@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_10_31_075732) do
+ActiveRecord::Schema[7.1].define(version: 2025_11_02_064941) do
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.integer "quantity"
+    t.integer "low_stock_threshold", default: 0
+    t.string "barcode"
+    t.date "useby"
+    t.date "useby_notify"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shopping_lists", force: :cascade do |t|
+    t.string "name"
+    t.integer "quantity"
+    t.integer "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
