@@ -17,6 +17,12 @@ function Home() {
                 <p>View items that are expiring soon or are low stock.</p>
             </Link>
           </div>
+          <div className="rounded-md border-2 border-black text-center m-4">
+            <Link to="/shoppinglist">
+                <p className="text-xl font-bold">Shopping List</p>
+                <p>Generate a shopping list with low stock items</p>
+            </Link>
+          </div>
       </div>
   );
 }

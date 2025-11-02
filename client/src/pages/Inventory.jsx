@@ -8,6 +8,7 @@ export default function Inventory() {
     name: "", 
     quantity: 1,
     expiry_date: "",
+    low_stock_threshold: 0,
     reminder_days_before: ""
   });
   const [loading, setLoading] = useState(true);
@@ -28,9 +29,10 @@ export default function Inventory() {
       name: form.name.trim(), 
       quantity: Number(form.quantity)||0,
       expiry_date: form.expiry_date || null,
+      low_stock_threshold: form.low_stock_threshold,
       reminder_days_before: form.reminder_days_before ? parseInt(form.reminder_days_before) : null
     });
-    setForm({ name: "", quantity: 1, expiry_date: "", reminder_days_before: "" });
+    setForm({ name: "", quantity: 1, expiry_date: "", low_stock_threshold: 0, reminder_days_before: "" });
     load();
   };
 
@@ -45,7 +47,7 @@ export default function Inventory() {
     const daysLeft = Math.ceil((new Date(item.expiry_date) - new Date()) / (1000 * 60 * 60 * 24));
     
     return (
-      <div style={{ marginTop: '0.5rem', paddingTop: '0.5rem', borderTop: '1px solid #eee', fontSize: '0.875rem' }}>
+      <div style={{ marginTop: '0.25rem', paddingTop: '0.25rem', fontSize: '0.875rem' }}>
         <div><strong>Expires:</strong> {new Date(item.expiry_date).toLocaleDateString()}</div>
         {item.reminder_days_before && (
           <div><strong>Reminder:</strong> {item.reminder_days_before} days before</div>
@@ -73,28 +75,40 @@ export default function Inventory() {
       placeholder="Item name"
       value={form.name}
       onChange={e=>setForm(v=>({...v, name:e.target.value}))}
-      className="flex-1 p-2"
+      className="flex-1 p-2 border rounded"
     />
     <input
       type="number"
       min="0"
       value={form.quantity}
       onChange={e=>setForm(v=>({...v, quantity:e.target.value}))}
-      className="w-24 p-2"
+      className="w-24 p-2 border rounded"
     />
-    <button>Add</button>
+    <button className="rounded bg-green-600 w-20 text-white">Add</button>
   </div>
-  
-  {/* ADD THESE EXPIRY FIELDS */}
+
   <div className="flex gap-2 text-sm mt-4">
     <div className="flex-1">
-      <label>Expiry Date:</label>
+      <label>Low Stock Threshold:</label>
+      <input
+        type="number"
+        min="0"
+        value={form.low_stock_threshold}
+        onChange={e=>setForm(v=>({...v, low_stock_threshold:e.target.value}))}
+        className="mx-5 w-24 p-2 border rounded"
+      />
+    </div>
+  </div>
+  
+  <div className="flex gap-2 text-sm mt-4">
+    <div className="flex-1">
+      <label>Expiry Date (optional):</label>
       <input
         type="date"
         min={new Date().toISOString().split('T')[0]}
         value={form.expiry_date || ''}
         onChange={e=>setForm(v=>({...v, expiry_date:e.target.value}))}
-        className="w-full p-1 mt-1"
+        className="w-full p-1 mt-1 border rounded"
       />
     </div>
     <div className="flex-1">
@@ -102,7 +116,7 @@ export default function Inventory() {
       <select
         value={form.reminder_days_before || ''}
         onChange={e=>setForm(v=>({...v, reminder_days_before:e.target.value}))}
-        className="w-full p-1 mt-1 h-[60%]"
+        className="w-full p-1 mt-1 h-[60%] rounded"
       >
         <option value="">No reminder</option>
         <option value="1">1 day before</option>
@@ -127,6 +141,7 @@ export default function Inventory() {
                 <button onClick={()=>inc(it)}>+</button>
                 <button onClick={()=>removeItem(it)} className="ml-2">Delete</button>
               </div>
+              <div className="text-xs"><strong>Low Stock Threshold:</strong> {it.low_stock_threshold}</div>
               {/* Add expiry info for each item */}
               {renderExpiryInfo(it)}
             </li>
