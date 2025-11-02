@@ -4,7 +4,6 @@ class ItemsController < ApplicationController
   # GET /items
   def index
     @items = Item.all
-
     render json: @items
   end
 
@@ -39,25 +38,27 @@ class ItemsController < ApplicationController
   end
 
   # GET /items/barcode/:code
-  # Searches for items by barcode
   def search_barcode
     render json: Item.where(barcode: params[:code])
   end
 
   # GET /items/notifications
-  # Gets all notifications
   def notifications
     render json: Item.where("date() > useby_notify OR date() > useby OR low_stock_threshold >= quantity")
   end
 
+  # GET /items/expiring_soon
+  def expiring_soon
+    @items = Item.expiring_soon
+    render json: @items
+  end
+
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def item_params
-      params.require(:item).permit(:name, :quantity, :low_stock_threshold, :barcode, :useby, :useby_notify)
+      params.require(:item).permit(:name, :quantity, :low_stock_threshold, :barcode, :useby, :useby_notify, :expiry_date, :reminder_days_before)
     end
 end

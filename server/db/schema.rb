@@ -20,6 +20,9 @@ ActiveRecord::Schema[7.1].define(version: 2025_11_02_064941) do
     t.date "useby_notify"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "expiry_date"
+    t.integer "reminder_days_before"
+    t.datetime "reminder_sent_at"
   end
 
   create_table "shopping_lists", force: :cascade do |t|
